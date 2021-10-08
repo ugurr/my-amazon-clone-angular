@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/SERVICE/api.service';
 
 
@@ -9,16 +9,16 @@ import { ApiService } from 'src/app/SERVICE/api.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private api :ApiService) { }
+  items!: any[];
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.getProducts()
-
+    this.getProducts();
   }
-getProducts(){
-  this.api.getJson().subscribe(resp=>{
-    console.log('resp',resp);
-    console.log('hello world')
-  })
-}
+  getProducts() {
+    this.api.getJson().subscribe(resp => {      
+      this.items = resp;
+    });
+  }
+
 }
