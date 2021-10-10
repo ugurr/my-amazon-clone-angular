@@ -16,6 +16,7 @@
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
+    "@angular/fire": "^7.1.0",
     "@angular/forms": "~12.2.0",
     "@angular/material": "^12.2.9",
     "@angular/platform-browser": "~12.2.0",
@@ -23,13 +24,15 @@
     "@angular/router": "~12.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "firebase": "^9.1.0",
+    "rxfire": "^6.0.0"
   },
   "devDependencies": {
-    "@angular/material": "^12.2.9",
     "@angular-devkit/build-angular": "~12.2.8",
     "@angular/cli": "~12.2.8",
     "@angular/compiler-cli": "~12.2.0",
+    "@angular/material": "^12.2.9",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
