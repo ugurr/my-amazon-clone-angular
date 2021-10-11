@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   signIn() {
     this.aut.signIn(this.LoginForm.value.email, this.LoginForm.value.password)
    }
-
+  
   createAccount() {
     this.aut.signUp(this.LoginForm.value.email, this.LoginForm.value.password)
   }
