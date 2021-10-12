@@ -1,6 +1,18 @@
-# MyAmazonClone
+# AmazonClone with AngularJS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+A Amazon Clone imitate the desktop web version of Amazon, you can sign Login page, you can add/remove items to the basket,you have your user authentication with firebase
+
+## Demo Link
+
+https://myangularclone.web.app/
+
+
+## Topics
+* Build Login Page with full login functionality (sign up and sign in) with firebase authentication
+* Store orders local storege
+* Get Products HttpGet from file-json
+* Responsive Design
+* Deploy the app live on Firebase
 
 ## Development server
 
