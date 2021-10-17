@@ -1,11 +1,11 @@
 <div class="products">
     <div class="product" *ngFor="let item of products" >
   <mat-card>            
-           <p>{{item.title}}</p> 
+           <p>{{item.Name}}:{{item.ID}}</p> 
                <p>$
-               <strong>{{item.price}}</strong>
+               <strong>{{item.Price }}</strong>
            </p>
-           <img src={{item.image}}>
+           <img src="/assets/images/{{item.ImgPath}}">
          <button (click)="addToCart(item)">Add to cart</button> 
         </mat-card>     </div>
    

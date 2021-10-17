@@ -12,9 +12,10 @@ export class AutService {
     private ngZone: NgZone,
     private router: Router) {
     this.fbAut.authState.subscribe(user => {
-      if (user)
+      if (user) {
         this.userData = user;
-      localStorage.setItem('user', this.userData.email)
+        localStorage.setItem('user', this.userData.email)
+      }
     })
   }
   signIn(email: string, password: string) {
@@ -44,7 +45,7 @@ export class AutService {
 
   getUser() {
     const user = localStorage.getItem('user')
-    return user?user:null;
+    return user ? user : null;
 
   }
 }

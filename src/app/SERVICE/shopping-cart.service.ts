@@ -32,7 +32,7 @@ shopping_cart_items:any[]=[];
   }
   getTotal = ()=>{
     let items = this.get_shopping_cart_items();
-    return items?.reduce((acc: any, item: { price: any; })=> acc+ item.price, 0)
+    return items?.reduce((acc: any, item: { Price: any; })=> acc+ item.Price, 0)
 
   }
   removerItem=(p: { id: any; })=>{

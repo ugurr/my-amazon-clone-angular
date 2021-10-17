@@ -1,7 +1,7 @@
 <div class="checkout_products">
     <p class="price">Price</p>
     <div class="checkout_product" *ngFor="let p of checkout_products">
-       <img src="{{p.image}}" alt="" class="checkout_product_img">
+       <img src="/assets/images/{{p.ImgPath}}" alt="" class="checkout_product_img">
        <div class="checkout_product_info">
            
            <p class="checkout_product_title">
@@ -30,7 +30,7 @@
           
        </div>
        <div class="checkout_products_price">
-           <p> <strong>${{p.price}}</strong> </p>
+           <p> <strong>${{p.Price}}</strong> </p>
        </div>
 
     </div>
