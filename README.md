@@ -1,6 +1,6 @@
-# AmazonClone with AngularJS
+# AmazonClone with Angular v12 
 
-A Amazon Clone imitate the desktop web version of Amazon, you can sign Login page, you can add/remove items to the basket,you have your user authentication with firebase
+A Amazon Clone imitate the web version of Amazon, you can sign Login page, you can add/remove items to the basket,you have your user authentication with firebase
 
 ## Demo Link
 
