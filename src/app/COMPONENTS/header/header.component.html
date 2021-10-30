@@ -1,42 +1,45 @@
 <div class="header">
-    <nav class="header_top">
-      <div class="header_menu">
-        <div class="header_menu_icon" routerLink="/">
-          <mat-icon>menu</mat-icon>
-  
-        </div>
-        <img routerLink="/" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" class="header_menu_logo">
-        <div class="header_menu_searchbar">
-          <input type="text" class="header_menu_input">
-          <div class="header_menu_searchbar_icon">
-            <mat-icon>search</mat-icon>
-          </div>
-        </div>
-  
-        <div class="header_menu_signin">
-          <span (click)="signOut()" class="header_menu_top_item" *ngIf="auth.isLoggedIn()">Hello, {{auth.getUser()}}</span>
-          <span routerLink="/login" class="header_menu_top_item" *ngIf="!auth.isLoggedIn()">Hello, Sign in</span>
-          <span class="header_menu_bottom_item">Accounts & Lists</span>
-  
-        </div>
-        <div  routerLink="/login" class="header_menu_signin">
-          <span class="header_menu_top_item">Returns</span>
-          <span class="header_menu_bottom_item">& Orders</span>
-  
-        </div>
-        <div  routerLink="/checkout" class="header_menu_cart">
-          <mat-icon>shopping_cart</mat-icon>
-          <p class="header_cart_number">{{shoppingCart.getCartLength()}}</p>
-        </div>
-  
-  
+  <nav class="header_top">
+    <div class="header_menu">
+      <div class="header_menu_icon" routerLink="/">
+        <mat-icon>menu</mat-icon>
+
       </div>
-    </nav>
-  
-    <nav class="header_bottom">
-      <div class="header_bottom_location_text">
-        <span class="header_left_line_one">Delivery to</span>
-        <span  class="header_left_line_two"> <Strong>Canada</Strong></span>
+      <img routerLink="/" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" class="header_menu_logo">
+      <div class="header_menu_searchbar">
+        <input type="text" class="header_menu_input" [(ngModel)]="filterText" />
+
+        <div class="header_menu_searchbar_icon">
+          <a [routerLink]="['/home']" [queryParams]="getQueryParam()">
+            <mat-icon>search</mat-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="header_menu_signin">
+        <span (click)="signOut()" id="logoutSpan" class="header_menu_top_item" *ngIf="auth.isLoggedIn()">Hello, {{auth.getUser()}}</span>
+        <a [routerLink]="['/login']"> <span class="header_menu_top_item" *ngIf="!auth.isLoggedIn()">Hello, Sign in</span></a>
+        <span class="header_menu_bottom_item">Accounts & Lists</span>
+
+      </div>
+      <div routerLink="/login" class="header_menu_signin">
+        <span class="header_menu_top_item">Returns</span>
+        <span class="header_menu_bottom_item">& Orders</span>
+
+      </div>
+      <div routerLink="/checkout" class="header_menu_cart">
+        <mat-icon>shopping_cart</mat-icon>
+        <p class="header_cart_number">{{shoppingCart.getCartLength()}}</p>
+      </div>
+
+
     </div>
-    </nav>
-  </div>
+  </nav>
+
+  <nav class="header_bottom">
+    <div class="header_bottom_location_text">
+      <span class="header_left_line_one">Delivery to</span>
+      <span class="header_left_line_two"> <Strong>Canada</Strong></span>
+    </div>
+  </nav>
+</div>

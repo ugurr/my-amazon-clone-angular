@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../../SERVICE/shopping-cart.service';
+import {AlertifyService} from "../../SERVICE/alertify.service"
+import { Product } from './product';
+
 
 @Component({
   selector: 'app-products',
@@ -8,15 +11,18 @@ import { ShoppingCartService } from '../../SERVICE/shopping-cart.service';
 })
 export class ProductsComponent implements OnInit {
   @Input()
-  products: any[] = [];
-
-
-  constructor(private shopping_cart: ShoppingCartService) { }
+  products: Product[] = [];
+ constructor(private shopping_cart: ShoppingCartService,
+             private alertifyService:AlertifyService
+            ) { }
 
   ngOnInit(): void {
+    console.log(this.products.length);
   }
-  addToCart(product: any) {
-    this.shopping_cart.addProduct(product);
+  addToCart(product: Product) {
+    this.shopping_cart.addProduct(product); 
+     this.alertifyService.success('<strong>"'+product.title+'"</strong> added to cart');
+
   }
 
 }

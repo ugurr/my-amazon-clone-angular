@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {firebaseConfig} from './CONFIG/firebase.config'
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFireModule } from '@angular/fire/compat';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     BannerComponent,
     ProductsComponent,
     CheckoutProductsComponent,
-    CheckoutSubtotalComponent
+    CheckoutSubtotalComponent,
    ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(firebaseConfig) 
+    AngularFireModule.initializeApp(firebaseConfig) ,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

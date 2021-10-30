@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+     margin-top: -300px;
+
 }
 
 .product > mat-card > img{
@@ -22,5 +24,7 @@
     background-color: #f0c14b;
     border: 1px solid;
     border-color: #a88134 #9c7e31 #846a29;
+    cursor: pointer;
+
 
 }

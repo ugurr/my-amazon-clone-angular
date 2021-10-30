@@ -24,7 +24,9 @@
 }
 .header_menu_icon > mat-icon{
     font-size: 30px;
-    align-items: center;
+    align-items: center;    
+    cursor: pointer;
+
 }
 .header_menu_searchbar{
     display: flex;
@@ -48,6 +50,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 .header_menu_logo{
     object-fit: contain;
@@ -75,6 +78,8 @@
       margin-left: 8px;
       height: 50px;
       justify-content: space-around;
+      
+    cursor: pointer;
 }
 .header_cart_number{
     color: #febd69;
@@ -94,4 +99,7 @@
     display: flex;
     flex-direction: column;
 
+}
+#logoutSpan  {
+    cursor: pointer;
 }

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../COMPONENTS/products/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCartService {
-shopping_cart_items:any[]=[];
+shopping_cart_items:Product[]=[];
   constructor() { }
 
-  addProduct = (product: any) => {
+  addProduct = (product: Product) => {
     let items=this.get_shopping_cart_items();
     if(items){
       items.push(product)   
@@ -36,12 +37,10 @@ shopping_cart_items:any[]=[];
 
   }
   removerItem=(p: { id: any; })=>{
-    console.log('calling remover ', p)
     let items = this.get_shopping_cart_items();
     
     const index = items.findIndex((item: { id: any; })=> item.id == p.id);
     if(index>=0){
-      console.log('hitting if')
       items.splice(index, 1);
       return localStorage.setItem('shopping_cart', JSON.stringify(items))
     }
