@@ -7,7 +7,9 @@ import { LoginComponent } from './PAGES/login/login.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
-  {path:'checkout',component:CheckoutComponent}
+  {path:'checkout',component:CheckoutComponent},
+  {path:'home',component:HomeComponent}
+
 
   
 ];

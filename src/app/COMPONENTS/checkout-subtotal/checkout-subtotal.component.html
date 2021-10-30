@@ -1,6 +1,6 @@
 <div class="subtotal" *ngIf="shoppingCart.getCartLength() > 0">
     <p>Subtotal: ({{shoppingCart.getCartLength()}} items) 
-        <strong>${{shoppingCart.getTotal()}}</strong></p>
+        <strong>${{shoppingCart.getTotal() | number:'1.1-5'}}</strong></p>
         <div class="subtotal_gift">
             <input type="checkbox"/>
            <p>This order contains a gift</p> 
